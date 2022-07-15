@@ -1,9 +1,10 @@
 import React from 'react'
 import CounterBtn from './CounterBtn'
 
-const DecreaseBtn = () => {
+const DecreaseBtn = ({handle}) => {
+  console.log('decrease')
   return (
-    <CounterBtn label="-" handle={() => {console.log('Decrease')}} />
+    <CounterBtn label="-" handle={handle} />
   )
 }
 

@@ -5,12 +5,14 @@ import IncreaseBtn from "./components/IncreaseBtn";
 import "./CounterView.css";
 
 const CounterView = () => {
+  const [count, setCount] = React.useState(0);
+  console.log('root view')
   return (
     <div className="counter-container">
-      <div className="counter-value">0</div>
+      <div className="counter-value">{count}</div>
       <div className="counter-btn-group">
-        <DecreaseBtn />
-        <IncreaseBtn />
+        <DecreaseBtn handle={() => setCount(count - 1)} />
+        <IncreaseBtn handle={() => setCount(count + 1)} />
       </div>
     </div>
   );
